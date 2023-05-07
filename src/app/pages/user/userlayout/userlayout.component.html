@@ -1,0 +1,45 @@
+<div class="header-container">
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <a class="navbar-brand">Subskart</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/userdashboard">User Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/activesubascriptions">Active Subscription</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="/usertransactions">User Transactions</a>
+                </li>
+
+
+
+            </ul>
+            <div>
+                <div class="col-sm-20" align="right" style="margin-top: 1px">
+                    <span>
+                        <font color='white' alignment="righ">Welcome Nikhil</font>
+                    </span>
+                </div>
+                <div class="col-sm-20" align="right" style="margin-top: 1px">
+                    <a href="#"><span>
+                            <font color='white' alignment="righ">Logout</font>
+                        </span></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- other nav bar -->
+
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
