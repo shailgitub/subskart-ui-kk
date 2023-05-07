@@ -23,6 +23,16 @@ import { ItemssummeryComponent } from './pages/vendor/itemssummery/itemssummery.
 import { TransactionsComponent } from './pages/vendor/transactions/transactions.component';
 import { SummeryreportComponent } from './pages/vendor/summeryreport/summeryreport.component';
 import { DetailedreportComponent } from './pages/vendor/detailedreport/detailedreport.component';
+import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard.component';
+import { ActivesubascriptionsComponent } from './pages/user/activesubascriptions/activesubascriptions.component';
+import { UsertransactionsComponent } from './pages/user/usertransactions/usertransactions.component';
+import { GetsubscriptionComponent } from './pages/user/getsubscription/getsubscription.component';
+import { UserlayoutComponent } from './pages/user/userlayout/userlayout.component';
+import { VendorlayoutComponent } from './pages/vendor/vendorlayout/vendorlayout.component';
+import { AdminlayoutComponent } from './pages/adminm/adminlayout/adminlayout.component';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
+import { UseritemselectComponent } from './pages/user/useritemselect/useritemselect.component';
+import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
 
 
 
@@ -46,6 +56,16 @@ import { DetailedreportComponent } from './pages/vendor/detailedreport/detailedr
     TransactionsComponent,
     SummeryreportComponent,
     DetailedreportComponent,
+    UserdashboardComponent,
+    ActivesubascriptionsComponent,
+    UsertransactionsComponent,
+    GetsubscriptionComponent,
+    UserlayoutComponent,
+    VendorlayoutComponent,
+    AdminlayoutComponent,
+    LoginpageComponent,
+    UseritemselectComponent,
+    SelecteditemsforpayComponent,
   
   ],
   imports: [

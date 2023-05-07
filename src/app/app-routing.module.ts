@@ -15,28 +15,67 @@ import { DetailedreportComponent } from './pages/vendor/detailedreport/detailedr
 import { ItemssummeryComponent } from './pages/vendor/itemssummery/itemssummery.component';
 import { TransactionsComponent } from './pages/vendor/transactions/transactions.component';
 import { SummeryreportComponent } from './pages/vendor/summeryreport/summeryreport.component';
+import { UserdashboardComponent } from './pages/user/userdashboard/userdashboard.component';
+import { ActivesubascriptionsComponent } from './pages/user/activesubascriptions/activesubascriptions.component';
+import { UsertransactionsComponent } from './pages/user/usertransactions/usertransactions.component';
+import { GetsubscriptionComponent } from './pages/user/getsubscription/getsubscription.component';
+import { LoginpageComponent } from './pages/loginpage/loginpage.component';
+import { AdminlayoutComponent } from './pages/adminm/adminlayout/adminlayout.component';
+import { UserlayoutComponent } from './pages/user/userlayout/userlayout.component';
+import { VendorlayoutComponent } from './pages/vendor/vendorlayout/vendorlayout.component';
+import { UseritemselectComponent } from './pages/user/useritemselect/useritemselect.component';
+import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
 
 
 
 const routes: Routes = [
   //{ path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'login', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'login', component: LoginpageComponent },
+  { path: '', component: LoginpageComponent },
+   { path: 'home', component: HomeComponent },
   { path: 'subskart', component: SubskartComponent },
-  { path: 'vender', component: VenderComponent },
-  { path: 'item', component: ItemComponent },
-  { path: 'admin', component: AdminComponent },
+   { path: 'admin', component: AdminComponent },
   //{ path: '**', component: LoginComponent },
-  { path: 'category', component: CategoryComponent },
+  
   { path: 'addcategory', component: AddcategoryComponent },
   { path: 'updatecategory', component: UpdatecategoryComponent },
-  // { path: 'categorylist', component: CategorylistComponent },
+
   { path: 'additem', component: AdditemComponent },
-  { path: 'itemselection', component: ItemselectionComponent },
-  { path: 'itemssummery', component: ItemssummeryComponent },
-  { path: 'transactions', component: TransactionsComponent },
-  { path: 'summeryreport', component: SummeryreportComponent },
-  { path: 'detailedreport', component: DetailedreportComponent },
+  
+
+  {
+    path: '',
+    component: AdminlayoutComponent,
+    children: [
+      { path: 'category', component: CategoryComponent },
+      { path: 'item', component: ItemComponent },
+      { path: 'vender', component: VenderComponent }
+     ]
+  },
+  {
+    path: '',
+    component: UserlayoutComponent,
+    children: [
+      { path: 'userdashboard', component: UserdashboardComponent },
+      { path: 'activesubascriptions', component: ActivesubascriptionsComponent },
+      { path: 'usertransactions', component: UsertransactionsComponent },
+      { path: 'getsubscription', component: GetsubscriptionComponent },
+      { path: 'useritemselect', component: UseritemselectComponent },
+      { path: 'selecteditemsforpay', component: SelecteditemsforpayComponent }
+      
+    ]
+  },
+  {
+    path: '',
+    component: VendorlayoutComponent,
+    children: [
+      { path: 'itemselection', component: ItemselectionComponent },
+      { path: 'itemssummery', component: ItemssummeryComponent },
+      { path: 'transactions', component: TransactionsComponent },
+      { path: 'summeryreport', component: SummeryreportComponent },
+      { path: 'detailedreport', component: DetailedreportComponent },
+    ]
+  }
 ];
 
 @NgModule({

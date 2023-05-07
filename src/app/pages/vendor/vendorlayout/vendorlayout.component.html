@@ -1,0 +1,49 @@
+<div class="header-container">
+    <div class="logo" (click)="testClick()"> subscription</div>
+    <div class="logout" (click)="testClick()">logout</div>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand">Subskart-Vendor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/itemselection">Item Selection</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/itemssummery">Item Summery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/transactions">Transaction History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/summeryreport">Payment Report</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/detailedreport">Detailed Report</a>
+            </li>
+        </ul>
+        <div>
+            <div class="col-sm-20" align="right" style="margin-top: 1px">
+                <span>
+                    <font color='white' alignment="righ">Welcome Mr. Jetha Lal</font>
+                </span>
+            </div>
+            <div class="col-sm-20" align="right" style="margin-top: 1px">
+                <a href="#"><span>
+                        <font color='white' alignment="righ">Logout</font>
+                    </span></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- other nav bar -->
+
+</div>
+
+<div>
+    <router-outlet></router-outlet>
+</div>
