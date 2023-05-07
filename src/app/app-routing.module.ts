@@ -25,6 +25,8 @@ import { UserlayoutComponent } from './pages/user/userlayout/userlayout.componen
 import { VendorlayoutComponent } from './pages/vendor/vendorlayout/vendorlayout.component';
 import { UseritemselectComponent } from './pages/user/useritemselect/useritemselect.component';
 import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
+import { PaylatersuccessComponent } from './pages/user/paylatersuccess/paylatersuccess.component';
+import { PaynowoptionComponent } from './pages/user/paynowoption/paynowoption.component';
 
 
 
@@ -61,7 +63,10 @@ const routes: Routes = [
       { path: 'usertransactions', component: UsertransactionsComponent },
       { path: 'getsubscription', component: GetsubscriptionComponent },
       { path: 'useritemselect', component: UseritemselectComponent },
-      { path: 'selecteditemsforpay', component: SelecteditemsforpayComponent }
+      { path: 'selecteditemsforpay', component: SelecteditemsforpayComponent },
+      { path: 'paylatersuccess', component: PaylatersuccessComponent },
+      { path: 'paynowoption', component: PaynowoptionComponent }
+      
       
     ]
   },
