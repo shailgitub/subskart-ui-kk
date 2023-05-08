@@ -33,8 +33,13 @@ import { AdminlayoutComponent } from './pages/adminm/adminlayout/adminlayout.com
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { UseritemselectComponent } from './pages/user/useritemselect/useritemselect.component';
 import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
+
 import { TestComponent } from './pages/adminm/test/test.component';
 import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
+
+import { PaylatersuccessComponent } from './pages/user/paylatersuccess/paylatersuccess.component';
+import { PaynowoptionComponent } from './pages/user/paynowoption/paynowoption.component';
+
 
 
 
@@ -68,8 +73,13 @@ import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
     LoginpageComponent,
     UseritemselectComponent,
     SelecteditemsforpayComponent,
+
     TestComponent,
     TestnextComponent,
+
+    PaylatersuccessComponent,
+    PaynowoptionComponent,
+
   
   ],
   imports: [
