@@ -15,12 +15,12 @@ export class AuthService {
       // be called after the token is refreshed
     }
   constructor(private router: Router, private http: HttpClient) { }
-  private generateTokenUrl = 'http://localhost:8082/authenticate';
+  private loginUrl = 'http://localhost:8082/login';
   
 
   //call token api from server
   generateToken(loginObj: any) {
-    return this.http.post(`${this.generateTokenUrl}`, loginObj);
+    return this.http.post(`${this.loginUrl}`, loginObj);
   }
   loginUser(token: string) {
     localStorage.setItem("token", token);
@@ -47,14 +47,11 @@ export class AuthService {
 
 
 
-  //   login(username: String, password: String) {
-  //     if (username === 'kiran' && password === 'kiran') {
-  //       return 200;
-  //     }else{
-  //       return 403;
-  //     }
-  //   }
-  //   logout() {
-  // this.router.navigate(['login']);
-  //   }
+    login(username: String, password: String) {
+      if (username === 'kiran' && password === 'kiran') {
+        return 200;
+      }else{
+        return 403;
+      }
+    }
 }

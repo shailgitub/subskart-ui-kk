@@ -25,6 +25,8 @@ import { UserlayoutComponent } from './pages/user/userlayout/userlayout.componen
 import { VendorlayoutComponent } from './pages/vendor/vendorlayout/vendorlayout.component';
 import { UseritemselectComponent } from './pages/user/useritemselect/useritemselect.component';
 import { SelecteditemsforpayComponent } from './pages/user/selecteditemsforpay/selecteditemsforpay.component';
+import { TestComponent } from './pages/adminm/test/test.component';
+import { TestnextComponent } from './pages/adminm/testnext/testnext.component';
 
 
 
@@ -32,16 +34,16 @@ const routes: Routes = [
   //{ path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'login', component: LoginpageComponent },
   { path: '', component: LoginpageComponent },
-   { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'subskart', component: SubskartComponent },
-   { path: 'admin', component: AdminComponent },
+  { path: 'admin', component: AdminComponent },
   //{ path: '**', component: LoginComponent },
-  
-  { path: 'addcategory', component: AddcategoryComponent },
+
+  //{ path: 'addcategory', component: AddcategoryComponent },
   { path: 'updatecategory', component: UpdatecategoryComponent },
 
-  { path: 'additem', component: AdditemComponent },
-  
+
+
 
   {
     path: '',
@@ -49,8 +51,10 @@ const routes: Routes = [
     children: [
       { path: 'category', component: CategoryComponent },
       { path: 'item', component: ItemComponent },
-      { path: 'vender', component: VenderComponent }
-     ]
+      { path: 'vender', component: VenderComponent },
+      { path: 'addcategory', component: AddcategoryComponent },
+      { path: 'additem', component: AdditemComponent },
+    ]
   },
   {
     path: '',
@@ -61,8 +65,10 @@ const routes: Routes = [
       { path: 'usertransactions', component: UsertransactionsComponent },
       { path: 'getsubscription', component: GetsubscriptionComponent },
       { path: 'useritemselect', component: UseritemselectComponent },
-      { path: 'selecteditemsforpay', component: SelecteditemsforpayComponent }
-      
+      { path: 'selecteditemsforpay', component: SelecteditemsforpayComponent },
+      { path: 'test', component: TestComponent },
+      { path: 'testnext', component: TestnextComponent }
+
     ]
   },
   {

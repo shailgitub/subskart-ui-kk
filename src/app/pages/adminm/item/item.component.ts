@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../../services/api.service';
-import { ItemPlanVenderForm } from '../../../models/item-plan-vender-form';
-import { Plan } from '../../../models/plan';
 import { Router } from '@angular/router';
 import { Item } from 'src/app/models/item';
 
@@ -12,24 +10,27 @@ import { Item } from 'src/app/models/item';
 })
 export class ItemComponent {
   items!: Item[];
+  
+  public discountPrice: number = 0;
 
-  constructor(private api: ApiService, private router: Router){ 
-    this.api.getCategories().subscribe((data: any) => {
-      this.items=data;
-        console.log(this.items);
-      });
+  constructor(private api: ApiService, private router: Router) {
+    this.api.getItems().subscribe((data: any) => {
+      this.items = data;
+      console.log(this.items);
+    });
   }
 
-  goToAddItem(){
-      this.router.navigate(['additem']);
-    }
   
-  testClick(){}
- 
+  goToAddItem() {
+    this.router.navigate(['additem']);
+  }
+
+  testClick() { }
+
   // reloadData() {
   //   this.categories = this.api.getCategories1();
   // }
-  
+
 
 
 }
