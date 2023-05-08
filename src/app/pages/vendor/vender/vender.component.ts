@@ -16,4 +16,6 @@ export class VenderComponent {
         console.log(this.venders);
       });
   }
+  goToAddItem(){}
+  testClick(){}
 }
