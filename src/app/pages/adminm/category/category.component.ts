@@ -10,20 +10,23 @@ import { CategoryService } from 'src/app/services/category-service.service';
   templateUrl: './category.component.html',
   styleUrls: ['./category.component.scss']
 })
-export class CategoryComponent{
-// implements OnInit {
+export class CategoryComponent {
+  // implements OnInit {
   categories!: Category[];
+  categoryObj: any = {
+    categoryId: '',
+    categoryName: ''
+  };
 
-  constructor(private api: ApiService, private router: Router){ 
+  constructor(private api: ApiService, private router: Router) {
     this.api.getCategories().subscribe((data: any) => {
-      this.categories=data;
-        console.log(this.categories);
-      });
+      this.categories = data;
+      console.log(this.categories);
+    });
   }
-
-  goToAddCategory(){
-      this.router.navigate(['addcategory']);
-    }
+  goToAddCategory() {
+    this.router.navigate(['addcategory']);
+  }
   //category: Category = new Category();
   // submitted = false;
   // category!: Category ;
@@ -31,7 +34,12 @@ export class CategoryComponent{
   // constructor(private categoryService: CategoryService,
   //   private router: Router) { }
 
-  testClick(){}
+  testClick(categoryId: any) {
+    this.api.updateCategory(categoryId).subscribe((data: any) => {
+      this.categoryObj = data;
+      console.log(this.categoryObj);
+    });
+  }
   // newCategory(): void {
   //   this.submitted = false;
   //   this.category = new Category(categoryId: number, categoryName: string): Category;

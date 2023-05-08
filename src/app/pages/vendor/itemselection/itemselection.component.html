@@ -249,39 +249,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-5">
-                    <h5>Category: TEA</h5>
-                </div>
+               
                 <table class="table table-striped table-hover">
                     <div> </div>
                     <thead>
                         <tr>
                             <th>Category Name</th>
                             <th>Item Name</th>
-                            <th>Item Details</th>
                             <th>Unit Price</th>
                             <th>Dicount(%)</th>
                             <th>Dicounted Price(INR)</th>
-                            <th>Enable</th>
-                            <th>Disable</th>
+                           
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <!--*ngFor="let item of items">
-                             <td>{{item.category.categoryName}}</td>
+                        <tr *ngFor="let item of items">
+                            <td>{{item.category.categoryName}}</td>
                             <td> {{item.itemName}}</td>
-                             <td> {{item.price}}</td>
-                              <td> {{item.itemDiscount}}</td>
-                               <td> {{dicountedPrice()}}</td> -->
+                            <td> {{item.pricePerUnit}}</td>
+                            <td> {{item.discount}}</td>
+                            <td> {{item.pricePerUnit-((item.pricePerUnit*item.discount)/100)}}</td>
                             <!-- Hard coded data -->
 
-                            <td>TEA </td>
+                            <!-- <td>TEA </td>
                             <td>Ginger Tea </td>
                             <td>Dummy Item Details </td>
                             <td>10 </td>
                             <td>10 </td>
-                            <td>9 </td>
+                            <td>9 </td> -->
 
 
                             <td>
@@ -290,250 +285,11 @@
                                     Remove Item</button>
                             </td>
                         </tr>
-                        <tr>
-                            <td>TEA </td>
-                            <td>Elachi Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>TEA </td>
-                            <td>Lemon Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>12 </td>
-                            <td>10 </td>
-                            <td>11 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
+                        
                     </tbody>
                 </table>
-                <div class="col-sm-5">
-                    <h5>Category: SNACK</h5>
-                </div>
-                <table class="table table-striped table-hover">
-                    <div> </div>
-                    <thead>
-                        <tr>
-                            <th>Category Name</th>
-                            <th>Item Name</th>
-                            <th>Item Details</th>
-                            <th>Unit Price</th>
-                            <th>Dicount(%)</th>
-                            <th>Dicounted Price(INR)</th>
-                            <th>Enable</th>
-                            <th>Disable</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!--*ngFor="let item of items">
-                             <td>{{item.category.categoryName}}</td>
-                            <td> {{item.itemName}}</td>
-                             <td> {{item.price}}</td>
-                              <td> {{item.itemDiscount}}</td>
-                               <td> {{dicountedPrice()}}</td> -->
-                            <!-- Hard coded data -->
-
-                            <td>SNACK </td>
-                            <td>Ginger Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>SNACK </td>
-                            <td>Elachi Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>SNACK </td>
-                            <td>Lemon Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>12 </td>
-                            <td>10 </td>
-                            <td>11 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="col-sm-5">
-                    <h5>Category: PARATHA</h5>
-                </div>
-                <table class="table table-striped table-hover">
-                    <div> </div>
-                    <thead>
-                        <tr>
-                            <th>Category Name</th>
-                            <th>Item Name</th>
-                            <th>Item Details</th>
-                            <th>Unit Price</th>
-                            <th>Dicount(%)</th>
-                            <th>Dicounted Price(INR)</th>
-                            <th>Enable</th>
-                            <th>Disable</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!--*ngFor="let item of items">
-                             <td>{{item.category.categoryName}}</td>
-                            <td> {{item.itemName}}</td>
-                             <td> {{item.price}}</td>
-                              <td> {{item.itemDiscount}}</td>
-                               <td> {{dicountedPrice()}}</td> -->
-                            <!-- Hard coded data -->
-
-                            <td>PARATHA </td>
-                            <td>Ginger Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PARATHA </td>
-                            <td>Elachi Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>PARATHA </td>
-                            <td>Lemon Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>12 </td>
-                            <td>10 </td>
-                            <td>11 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="col-sm-5">
-                    <h5>Category: JUCE</h5>
-                </div>
-                <table class="table table-striped table-hover">
-                    <div> </div>
-                    <thead>
-                        <tr>
-                            <th>Category Name</th>
-                            <th>Item Name</th>
-                            <th>Item Details</th>
-                            <th>Unit Price</th>
-                            <th>Dicount(%)</th>
-                            <th>Dicounted Price(INR)</th>
-                            <th>Enable</th>
-                            <th>Disable</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <!--*ngFor="let item of items">
-                             <td>{{item.category.categoryName}}</td>
-                            <td> {{item.itemName}}</td>
-                             <td> {{item.price}}</td>
-                              <td> {{item.itemDiscount}}</td>
-                               <td> {{dicountedPrice()}}</td> -->
-                            <!-- Hard coded data -->
-
-                            <td>JUCE </td>
-                            <td>Ginger Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>JUCE </td>
-                            <td>Elachi Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>10 </td>
-                            <td>10 </td>
-                            <td>9 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>JUCE </td>
-                            <td>Lemon Tea </td>
-                            <td>Dummy Item Details </td>
-                            <td>12 </td>
-                            <td>10 </td>
-                            <td>11 </td>
-
-                            <td>
-                                <button (click)="testClick()" class="btn btn-primary"> Add Item</button>
-                                <button (click)="testClick()" class="btn btn-danger" style="margin-left: 10px">
-                                    Remove Item</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="col-sm-5">
+              
+                <!-- <div class="col-sm-5">
                     <h5>Category: THALI</h5>
                 </div>
                 <table class="table table-striped table-hover">
@@ -552,13 +308,13 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <!--*ngFor="let item of items">
+                            *ngFor="let item of items">
                              <td>{{item.category.categoryName}}</td>
                             <td> {{item.itemName}}</td>
                              <td> {{item.price}}</td>
                               <td> {{item.itemDiscount}}</td>
-                               <td> {{dicountedPrice()}}</td> -->
-                            <!-- Hard coded data -->
+                               <td> {{dicountedPrice()}}</td>
+                           
 
                             <td>THALI </td>
                             <td>Ginger Tea </td>
@@ -603,7 +359,7 @@
                             </td>
                         </tr>
                     </tbody>
-                </table>
+                </table> -->
 
                 <div class="clearfix">
                     <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>

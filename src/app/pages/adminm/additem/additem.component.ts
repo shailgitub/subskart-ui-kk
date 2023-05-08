@@ -16,15 +16,17 @@ export class AdditemComponent {
   item: Item = {
     itemId: 0,
     itemName: '',
-    price: 0,
-    itemDiscount: 0
+    pricePerUnit: 0,
+    discount: 0,
+
+    category: { categoryId: 0, categoryName: '' }
   };
   category: Category = {
     categoryId: 0,
     categoryName: '',
-   
+
   };
- // item!:Item;
+  // item!:Item;
   temp = new Item();
   submitted = false;
 
@@ -33,50 +35,52 @@ export class AdditemComponent {
 
   ngOnInit() {
   }
-//new code
+  //new code
   newItem(): void {
     this.submitted = false;
-      this.category = {
+    this.category = {
       categoryId: 0,
       categoryName: '',
       //published: false
     };
     this.item = {
-     // this.category.categoryName: '',
+      // this.category.categoryName: '',
       itemId: 0,
       itemName: '',
-      price: 0,
-      itemDiscount: 0
+      pricePerUnit: 0,
+      discount: 0,
+      // dicountedPrice:0,
+      category: { categoryId: 0, categoryName: '' }
     };
   }
-  onOptionsSelected(value:string){
-    if(value!=null){
-    this.temp = new Item({price:parseInt(value)});
-    this.item=this.temp;
-    //this.itemPlanVenderForm.item=this.item;
-  
-    console.log("the selected value is " + value);
+  onOptionsSelected(value: string) {
+    if (value != null) {
+      this.temp = new Item({ pricePerUnit: parseInt(value) });
+      this.item = this.temp;
+      //this.itemPlanVenderForm.item=this.item;
+
+      console.log("the selected value is " + value);
     }
 
-  // saveItem(): void {
-  //   const data = {
-  //    itemId: this.item.itemId,
-  //    itemName: this.item.itemName
-  //   };
-  //   this.categoryService.createCategory(data)
-  //   .subscribe({
-  //     next: (result) => {
-  //       console.log(result);
-  //       this.submitted = true;
-  //     },
-  //     error: (e) => console.error(e)
-  //   });
-  
-}
+    // saveItem(): void {
+    //   const data = {
+    //    itemId: this.item.itemId,
+    //    itemName: this.item.itemName
+    //   };
+    //   this.categoryService.createCategory(data)
+    //   .subscribe({
+    //     next: (result) => {
+    //       console.log(result);
+    //       this.submitted = true;
+    //     },
+    //     error: (e) => console.error(e)
+    //   });
 
-saveItem(){
-    
-}
+  }
+
+  saveItem() {
+
+  }
 
   gotoList() {
     this.router.navigate(['/categorys']);
